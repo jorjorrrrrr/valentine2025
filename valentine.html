@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>muak muak</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe6f2;
+            flex-direction: column;
+            font-family: "Arial", sans-serif;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .rose-image {
+            width: auto;
+            height: auto;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #d6336c;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .hidden-text {
+            font-size: 20px;
+            color: transparent; /* 隱形文字 */
+            pointer-events: all; /* 使得文字可以被點擊 */
+            cursor: pointer; /* 改變鼠標樣式，顯示可點擊 */
+        }
+        .hidden-images {
+            display: none;
+            margin: 0 20px;
+        }
+        .hidden-images img {
+            width: 300px;
+            height: auto;
+        }
+        .hidden-text-abs {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: transparent; /* 使文字隱形 */
+            pointer-events: all; /* 使得文字可以被點擊 */
+            cursor: pointer; /* 改變鼠標樣式，顯示可點擊 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hidden-images" id="leftImage">
+            <img src="src/photo1.jpg" alt="Photo 1">
+        </div>
+        <img src="src/rose.gif" alt="Rose" class="rose-image">
+        <div class="hidden-images" id="rightImage">
+            <img src="src/photo2.jpg" alt="Photo 2">
+        </div>
+    </div>
+    <div class="message" onclick="showImages()">CACA，情人節快樂！❤️</div>
+    <div class="hidden-text">嘿嘿 你覺得同一招會用兩次嗎</div>
+    <div class="hidden-text-abs" onclick="showImages()">當然會囖 hahaha</div>
+    <div class="message" id="textElement" style="display:none;"> 今年jorjor沒有💰買花花給cacaQQ，等jorjor有錢再補給caca！</div>
+
+
+    <script>
+        function showImages() {
+            // 顯示左右的照片
+            document.getElementById('leftImage').style.display = 'block';
+            document.getElementById('rightImage').style.display = 'block';
+            document.getElementById('textElement').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

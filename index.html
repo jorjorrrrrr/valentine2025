@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情人節快樂</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe6f2;
+            flex-direction: column;
+            font-family: "Arial", sans-serif;
+            text-align: center;
+        }
+        .message {
+            font-size: 30px;
+            color: #d6336c;
+            font-weight: bold;
+        }
+        .hidden-text {
+            font-size: 20px;
+            color: transparent; /* 隱形文字 */
+            pointer-events: all; /* 使得文字可以被點擊 */
+            cursor: pointer; /* 改變鼠標樣式，顯示可點擊 */
+        }
+    </style>
+</head>
+<body>
+    <div class="message">CACA，情人節快樂！❤️</div>
+    <div class="hidden-text" onclick="redirectToIndex()">啊 被你找到了</div>
+
+    <script>
+        function redirectToIndex() {
+            window.location.href = "valentine.html";  // 跳轉到 valentine.html
+        }
+    </script>
+</body>
+</html>
